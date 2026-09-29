@@ -1,0 +1,142 @@
+.questionnaire-json-trigger,
+.questionnaire-json-action,
+.questionnaire-json-close {
+  color: var(--color-accent);
+  background: var(--color-surface-soft);
+  border: 1px solid var(--color-border-strong);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 650;
+  transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+.questionnaire-json-trigger {
+  flex: 0 0 auto;
+  padding: 8px 10px;
+  border-radius: 9px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.questionnaire-json-trigger:hover,
+.questionnaire-json-action:hover,
+.questionnaire-json-close:hover {
+  background: var(--color-accent-soft);
+  border-color: var(--color-accent);
+}
+
+.questionnaire-json-trigger:focus-visible,
+.questionnaire-json-action:focus-visible,
+.questionnaire-json-close:focus-visible,
+.questionnaire-json-content:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.questionnaire-json-dialog {
+  width: min(900px, calc(100vw - 28px));
+  height: min(780px, calc(100dvh - 28px));
+  max-width: none;
+  max-height: none;
+  padding: 0;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 17px;
+  box-shadow: 0 24px 80px rgb(40 32 24 / 25%);
+}
+
+.questionnaire-json-dialog[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+.questionnaire-json-dialog::backdrop {
+  background: rgb(37 30 24 / 50%);
+}
+
+.questionnaire-json-heading {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 19px 21px 13px;
+}
+
+.questionnaire-json-heading h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.questionnaire-json-heading p {
+  margin: 4px 0 0;
+  color: var(--color-text-soft);
+  font-size: 12px;
+}
+
+.questionnaire-json-close {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 8px;
+  font-size: 23px;
+  line-height: 1;
+}
+
+.questionnaire-json-actions {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+  padding: 0 21px 14px;
+}
+
+.questionnaire-json-action {
+  padding: 8px 11px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.questionnaire-json-action-message {
+  color: var(--color-text-soft);
+  font-size: 12px;
+}
+
+.questionnaire-json-content {
+  min-width: 0;
+  min-height: 0;
+  flex: 1;
+  margin: 0 21px 21px;
+  padding: 17px;
+  overflow: auto;
+  color: var(--color-text);
+  background: var(--color-surface-soft);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: normal;
+  scrollbar-color: var(--color-border-strong) transparent;
+  scrollbar-width: thin;
+}
+
+@media (max-width: 480px) {
+  .questionnaire-json-heading {
+    padding: 16px 15px 12px;
+  }
+
+  .questionnaire-json-actions {
+    padding: 0 15px 12px;
+  }
+
+  .questionnaire-json-content {
+    margin: 0 15px 15px;
+    padding: 12px;
+    font-size: 11px;
+  }
+}

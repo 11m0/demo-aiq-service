@@ -1,0 +1,23 @@
+[tool.pytest.ini_options]
+pythonpath = [".", "Agent/src", "API/src", "Backend/src", "Core/src", "Contracts/src"]
+testpaths = ["Agent/tests", "API/tests", "Backend/tests", "Core/tests", "Contracts/tests", "dev_tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["D", "E4", "E7", "E9", "F", "I"]
+ignore = ["D200", "D203", "D212", "D401"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.isort]
+known-first-party = [
+    "questionnaire_agent",
+    "questionnaire_api",
+    "questionnaire_backend",
+    "questionnaire_contracts",
+    "questionnaire_core",
+]

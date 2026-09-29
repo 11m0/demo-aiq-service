@@ -1,0 +1,53 @@
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# Python virtual environments
+.venv/
+venv/
+
+# Python caches and build artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Frontend dependencies and tool caches
+node_modules/
+coverage/
+.vite/
+*.tsbuildinfo
+
+# Test and tool caches
+.coverage
+htmlcov/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.tmp/
+
+# Local tests and LLM evaluations
+tests/
+/Evals/
+/dev_tests/
+
+# Local development instructions and reports
+/AGENTS.md
+/ARCHITECTURE.md
+/CURRENT_ARCHITECTURE.md
+/PERFORMANCE_*.md
+
+# Local examples and diagnostic scripts
+/API/examples/
+/API/scripts/Test-ApiHealth.ps1
+/API/scripts/Invoke-ApiTurn.ps1
+/scripts/smoke.py
+
+# Editors and operating systems
+.idea/
+.vscode/
+.run/
+.DS_Store
+Thumbs.db
